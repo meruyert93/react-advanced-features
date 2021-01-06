@@ -14,7 +14,9 @@ const ControlledInputs = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (name && email) {
+           
             const person = {id: new Date().getTime().toString(), name, email}
+            console.log(people)
             setPeople((people)=> {
                 return [...people, person]
             })
@@ -24,7 +26,7 @@ const ControlledInputs = () => {
             console.log('empty value')
         }
     }
-console.log(people)
+
   return (
     <>
         <article>
@@ -40,7 +42,7 @@ console.log(people)
                     >
                     </input>
                 </div>
-                <div className="form-control"j>
+                <div className="form-control">
                     <label htmlFor="email">Email: </label>
                     <input 
                         type="text" 
